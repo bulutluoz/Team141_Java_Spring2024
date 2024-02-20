@@ -33,6 +33,26 @@ public class C01_PrimitiveDataTurleri {
         // primitive data turleri sadece deger barindirir
         // non-primitive data turleri ise deger ve hazir method'lari barindirirlar
 
+        String str = "Java Candir";
+
+        System.out.println(str.toUpperCase()); // JAVA CANDIR
+        System.out.println(str.toLowerCase()); // java candir
+
+        int not = 10; // isimler kucuk harfle baslar
+        int Not = 20; // isimlerin buyuk harfle baslamasi tavsiye edilmez
+        // int not = 30; // Variable 'not' is already defined in the scope
+        int NOt = 40;
+        int NOT = 50;
+
+        System.out.println(Not); // 20
+
+        String isim1$_ = "Eghbal";
+        // String 1isim = "Ali"; variable isimleri sayi ile baslayamaz
+        String $isim = "Seher"; // isimlerin $ veya _ ile baslamasi tavsiye edilmez
+
+        // int int = 20; Javada tanimli keyword'ler isim olarak kullanilmaz
+
+        char isminIlkHarfi = 'a';
 
     }
 }
