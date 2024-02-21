@@ -37,20 +37,27 @@ public class C03_Casting {
         // 1- Kucuk data turundeki deger, buyuk data turundeki variable'a atanirsa
         //    java bunu otomatik olarak yapar (Auto Widening)
 
-        dbl = byt1;
-        dbl = tamsayi;
-        dbl = flt1;
+        // 2- Daha genis data turundeki degeri, daha dar kapsamli variable'a atamak isterseniz
+        //    Java bunu otomatik yapmaz,
+        //    data kayiplari veya farkli sonuclar olabilecegi icin
+        //    sorumlulugu bizim almamizi ister (Explicit Narrowing)
+        //    sorumlulugu almak icin, daraltmak istediginiz degerin onune
+        //    parantez icerisinde, donusturmek istediginiz data turunu yazmalisiniz
 
-        flt1 = byt1;
-        flt1 = tamsayi;
-        //flt1 = dbl1;
+        dbl = byt1; // Auto Widening
+        dbl = tamsayi; // // Auto Widening
+        dbl = flt1; // Auto Widening
 
-        tamsayi = byt1;
-        //tamsayi = flt1;
-        //tamsayi = dbl;
+        flt1 = byt1;// Auto Widening
+        flt1 = tamsayi;// Auto Widening
+        flt1 = (float) dbl1; //Explicit Narrowing
 
-        //byt1 = tamsayi;
-        //byt1 = flt1;
-        //byt1 = dbl;
+        tamsayi = byt1;// Auto Widening
+        tamsayi = (int)flt1;//Explicit Narrowing
+        tamsayi = (int)dbl;//Explicit Narrowing
+
+        byt1 = (byte)tamsayi;//Explicit Narrowing
+        byt1 = (byte)flt1;//Explicit Narrowing
+        byt1 = (byte)dbl;//Explicit Narrowing
     }
 }
