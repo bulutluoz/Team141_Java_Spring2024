@@ -27,5 +27,6 @@ public class C03_Contains {
             System.out.println("tembellik guzel degil");
         }
 
+
     }
 }
