@@ -13,35 +13,33 @@ public class C06_equals_equalsIgnoreCase {
         // equals() String'lerin metin olarak birbirine esit olup olmadigini kontrol eder
         // String'de buyuk harf ve kucuk harf birbirinden farkli karakterler oldugundan
         //
-
-        System.out.println(str1.equals(str2)); // java <==> Java  true
-        System.out.println(str1.equals(str3)); // java <==> JAVA  true
-        System.out.println(str1.equals(str4)); // java <==> Java  true
+        System.out.println(str1.equals(str2)); // java <==> Java  false
+        System.out.println(str1.equals(str3)); // java <==> JAVA  false
+        System.out.println(str1.equals(str4)); // java <==> Java  false
         System.out.println(str2.equals(str4)); // Java <==> Java  true
-        System.out.println(str1.equals(str5)); // java <==> JAVA  false  sonda bosluk var
+        System.out.println(str1.equals(str5)); // java <==> JAVA  false
         System.out.println(str3.equals(str5)); // JAVA <==> JAVA  false  sonda bosluk var
 
         // Eger buyuk kucuk harf onemsiz ise
         // amacimiz sadece metin olarak ayni olup olmadigina bakmak ise
         // equalsIgnoreCase()
         System.out.println("=================");
-        System.out.println(str1.equalsIgnoreCase(str2)); // java <==> Java  false
-        System.out.println(str1.equalsIgnoreCase(str3)); // java <==> JAVA  false
-        System.out.println(str1.equalsIgnoreCase(str4)); // java <==> Java  false
-        System.out.println(str2.equalsIgnoreCase(str4)); // Java <==> Java  true
-        System.out.println(str1.equalsIgnoreCase(str5)); // java <==> JAVA  false
-        System.out.println(str3.equalsIgnoreCase(str5)); // JAVA <==> JAVA  false  sonda bosluk var
 
+        System.out.println(str1.equalsIgnoreCase(str2)); // java <==> Java  true
+        System.out.println(str1.equalsIgnoreCase(str3)); // java <==> JAVA  true
+        System.out.println(str1.equalsIgnoreCase(str4)); // java <==> Java  true
+        System.out.println(str2.equalsIgnoreCase(str4)); // Java <==> Java  true
+        System.out.println(str1.equalsIgnoreCase(str5)); // java <==> JAVA  false  sonda bosluk var
+        System.out.println(str3.equalsIgnoreCase(str5)); // JAVA <==> JAVA  false  sonda bosluk var
 
 
         // Java'da metin ifadelerin karsilastirilmasi icin == kullanilmaz
         // bunun yerine equals() veya equalsIgnoreCase() kullanilmalidir.
 
-
-
         // cunku equals() sadece metne odaklanirken
         // == hem metne , hem de referans'a odaklanir
         // == kullanildiginda ayni metinlerden bazilari true verirken bazilari false verir
+
         System.out.println("=================");
         String s1 = "java";
         String s2 = "java";

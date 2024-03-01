@@ -4,7 +4,7 @@ public class C07_substring {
 
     public static void main(String[] args) {
 
-        String str = "Java guzeldir";
+        String str = "Java guzeldir";  // length yani karakter sayisi 13
 
         System.out.println(str.substring(2)); // va guzeldir
 
