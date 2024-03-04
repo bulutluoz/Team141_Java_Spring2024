@@ -29,5 +29,8 @@ public class C05_Soru {
             System.out.println("mailde yazim hatasi var");
         }
 
+        // sanane@gmail.comm   contains true, endsWith false
+
+
     }
 }
