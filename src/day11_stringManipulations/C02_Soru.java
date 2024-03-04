@@ -29,7 +29,7 @@ public class C02_Soru {
         }else{
             System.out.println("aradiginiz metin cumlede 1'den fazla kullanilmis");
         }
-
+        // Java cok guzel
 
     }
 }
