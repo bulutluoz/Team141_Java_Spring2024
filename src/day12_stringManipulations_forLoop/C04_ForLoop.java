@@ -29,6 +29,7 @@ public class C04_ForLoop {
 
         // 2 basamakli sayilardan 7 ile bolunebilenleri yazdirin
 
+
         for (int i = 10; i <100 ; i++ ) { // 10,11,12,13,.......,99
             // 7 ile bolunme sartini if ile kontrol edelim
 
@@ -37,13 +38,6 @@ public class C04_ForLoop {
             }
 
         }
-
-
-
-
-
-
-
 
     }
 }
