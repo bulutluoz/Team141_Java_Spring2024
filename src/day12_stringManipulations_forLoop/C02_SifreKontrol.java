@@ -34,13 +34,14 @@ public class C02_SifreKontrol {
          */
 
         int flag = 20;
-
+        int sayac = 0;
 
         //         - ilk harf kucuk harf olmali
         char ilkHarf = sifre.charAt(0);
         if ( !Character.isLowerCase(ilkHarf) ){
             System.out.println("Ilk karakter kucuk harf olmali");
             flag = 15;// hata varsa hep ayni degeri atayacagiz
+            sayac++; // hata varsa sayaci 1 artir
         }
 
         //         - son karakter rakam olmali
@@ -50,6 +51,7 @@ public class C02_SifreKontrol {
 
             System.out.println("Son karakter rakam olmali");
             flag = 15;
+            sayac++;
         }
 
         //         - sifre bosluk icermemeli
@@ -57,6 +59,7 @@ public class C02_SifreKontrol {
         if (sifre.contains(" ")){
             System.out.println("Sifre bosluk icermemeli");
             flag = 15;
+            sayac++;
         }
 
         //         - uzunlugu en az 10 karakter olmali
@@ -64,6 +67,7 @@ public class C02_SifreKontrol {
         if (sifre.length() < 10){
             System.out.println("Sifrenin uzunlugu en az 10 karakter olmali");
             flag = 15;
+            sayac++;
         }
 
 
@@ -74,6 +78,16 @@ public class C02_SifreKontrol {
         }else {
             System.out.println("Lutfen hatalari duzelterek yeniden sifre giriniz");
         }
+
+
+        // sayac kullanarak sonucu yazdirma
+
+        if (sayac == 0){
+            System.out.println("Sifre basarili olarak kaydedildi");
+        }else {
+            System.out.println(sayac + " adet hata yaptiniz, Lutfen tekrar deneyin");
+        }
+
 
 
     }
