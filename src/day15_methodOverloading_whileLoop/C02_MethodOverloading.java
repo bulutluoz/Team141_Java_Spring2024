@@ -19,7 +19,7 @@ public class C02_MethodOverloading {
         toplama('a','b'); // toplama char char ==> Iki integer'in toplami : 195
         // toplama("Ali",5); //CTE ==>"ali" argumentini method'lardan hic biri parametre olarak kabul etmez
         toplama(3.4f, 6); // toplama float int ==> double ve integer'in toplami : 9.400000095367432
-
+        toplama(2.3f,3.1f); // Iki double'in toplami : 5.3999998569488525
 
     }
 
