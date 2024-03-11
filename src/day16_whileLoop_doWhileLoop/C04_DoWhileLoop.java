@@ -15,11 +15,11 @@ public class C04_DoWhileLoop {
 
         Scanner scanner = new Scanner(System.in);
 
-        int sayi = 0;
+        int sayi=0;
         int sayiToplami = 0;
         int sayiAdedi = 0 ;
 
-        while(sayi != 0){
+        do{
 
             System.out.println("Lutfen toplanmak uzere pozitif tamsayi giriniz..." +
                     "\nBitirmek icin 0'a basin");
@@ -33,7 +33,7 @@ public class C04_DoWhileLoop {
                 sayiAdedi++;
             }
 
-        }
+        }while(sayi != 0);
 
         System.out.println("Girilen " + sayiAdedi + " adet pozitif sayinin toplami : " + sayiToplami);
 
