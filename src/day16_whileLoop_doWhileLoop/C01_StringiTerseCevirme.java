@@ -22,7 +22,7 @@ public class C01_StringiTerseCevirme {
         int index = metin.length()-1;
         String tersMetin = "";
 
-        while (index >=0 ){
+        while ( index >=0 ){
 
             tersMetin += metin.charAt(index);
             index--;
