@@ -17,7 +17,7 @@ public class C02_UsAlma {
 
     public static void usAl( int sayi, int pozitifUs){
 
-        // 2 uzeri 4 'u hesapla ==> 2*2*2*2 => 16
+        // 2 uzeri 5 'u hesapla ==> 2*2*2*2*2 => 32
         int sonuc = 1;
         int hesaplanacakUs = pozitifUs;
 
