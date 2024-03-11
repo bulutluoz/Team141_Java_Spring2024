@@ -26,7 +26,7 @@ public class C05_SifreOlusturma {
         String sifre = "";
         boolean sifreSonuc = false;
 
-        while ( sifreSonuc == false){
+        while (!sifreSonuc){ // sifreSonuc == false
 
             System.out.println("Lutfen sifre giriniz");
             sifre = scanner.nextLine();
