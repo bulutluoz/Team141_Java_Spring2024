@@ -10,10 +10,11 @@ public class C03_ClassLevelVariablelar {
         genel olarak class level variable'lar class'in en ust kisminda olusturulur
 
         1- class level variable'larin scope'u BUTUN CLASS'dir
-           ancak class level variable'larda static keyword'u de etkilidir
+           ancak class level variable'larin method icerisinde direk kullanilip kullanilamamasi
+           static keyword'une de baglidir
         2- Variable static olarak isaretlenmisse
            class icerisinde her yerde direk kullanilabilir
-           ama variable static degilse, static method'lardan kullanilamaz
+           ama variable static degilse(instance), static method'lardan kullanilamaz
         3- static keyword'u method'lar icin de kullanilir
            static method'lar bunyelerine
            static olmayan variable ve method'lari kabul etmezler
@@ -50,9 +51,9 @@ public class C03_ClassLevelVariablelar {
     }
 
     public void method2(){
-        System.out.println(sayi1);
+        System.out.println(sayi1); // 0
         System.out.println(sayi2);
-        System.out.println(str1);
+        System.out.println(str1); // null
         System.out.println(str2);
         method1();
     }
