@@ -1,8 +1,6 @@
 package day19_arrays;
 
-import java.util.Arrays;
-
-public class C02_TumElementleriArtirma {
+public class C03_TumElementleriArtirma {
 
     public static void main(String[] args) {
 
