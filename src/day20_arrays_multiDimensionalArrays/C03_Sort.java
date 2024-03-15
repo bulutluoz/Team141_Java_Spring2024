@@ -1,5 +1,7 @@
 package day20_arrays_multiDimensionalArrays;
 
+import day19_arrays.C05_ElemanArama;
+
 import java.util.Arrays;
 
 public class C03_Sort {
@@ -19,6 +21,8 @@ public class C03_Sort {
         Arrays.sort(isimler);
 
         System.out.println(Arrays.toString(isimler));
-        //
+        // [MEMET, Mahmut, Mansur, Mehmet, Mustafa, melik]
+
+
     }
 }
