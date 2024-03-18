@@ -1,4 +1,4 @@
-package day21_MultiDimensionalArrays;
+package day21_MultiDimensionalArrays_ArrayLists;
 
 public class C03_InnerArraylerinIlkElemanlariniTopla {
 
