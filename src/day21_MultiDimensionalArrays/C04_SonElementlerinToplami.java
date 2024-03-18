@@ -10,12 +10,20 @@ public class C04_SonElementlerinToplami {
 
         int[][] arr = {{3,6},{1,6,9},{8,0,2,1},{4}};
 
-
+        sonElementleritopla(arr); // Son elementlerin toplami : 20
     }
 
     public static void sonElementleritopla(int[][] arr){
 
+        int toplam = 0;
 
+        for (int i = 0; i < arr.length ; i++) {
+
+            toplam += arr[i][arr[i].length-1];
+
+        }
+
+        System.out.println("Son elementlerin toplami : " + toplam);
 
     }
 }
