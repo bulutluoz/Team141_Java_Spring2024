@@ -30,9 +30,48 @@ public class C05_ListRemoveMethodu {
 
         System.out.println(harfler.remove("y")); // false
 
+        // eger remove(istenenIndex) kullanilirsa
+        // index'i bulamama diye bir ihtimal olamayacagindan
+        // true/false yerine bize sildigi elemani dondurur
+        System.out.println(harfler.remove(1)); // a
+
+        System.out.println(harfler); // [r, t, a]
+
+        // harfler.remove(10); // IndexOutOfBoundsException
 
 
+        List<String > karakterler = new ArrayList<>(Arrays.asList("9","a","%","i","#"));
 
+        // karakterler listesinden, harfler listesinde olan tum harfleri siler
+        // karakterler listesi degisirse true, degismezse false dondurur
+        System.out.println(karakterler.removeAll(harfler)); // true
+
+        System.out.println(karakterler); // [9, %, i, #]
+
+        System.out.println(karakterler.removeAll(harfler)); // false
+
+
+        // Listemiz sayilardan olusuyorsa
+        // girilen sayinin index mi yoksa silinecek sayi mi oldugunu
+        // net olarak bilmek icin
+        // Java girilen sayiyi INDEX olarak KABUL edecegini belirtir
+        List<Integer> sayilar = new ArrayList<>(Arrays.asList(2,5,7,3,5,6));
+
+        System.out.println(sayilar); // [2, 5, 7, 3, 5, 6]
+
+        System.out.println(sayilar.remove(2)); // 7
+
+        System.out.println(sayilar); // [2, 5, 3, 5, 6]
+
+        // EGER eleman olarak 6'yi silmek istiyorsak
+        // ve index'ini bilmiyorsak
+        // once silinecek sayiyi non-primitive bir variable'a atamaliyiz
+
+        Integer silinecekSayi = 6;
+
+        System.out.println(sayilar.remove(silinecekSayi)); // true
+
+        System.out.println(sayilar); // [2, 5, 3, 5]
 
     }
 }
