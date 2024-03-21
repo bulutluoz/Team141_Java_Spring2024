@@ -18,7 +18,6 @@ public class C03_PozitifTamBolenlerListesi {
         // [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 40, 48, 60, 80, 120, 240]
 
 
-
     }
 
     public static List<Integer> pozitifBolenListesi(int sayi){
