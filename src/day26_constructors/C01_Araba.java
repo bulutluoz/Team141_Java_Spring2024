@@ -19,7 +19,6 @@ public class C01_Araba {
         // gorunur bir parametresiz cons. olusturmaliyiz
     }
 
-
     C01_Araba(String mrk, String mdl ,int yl , int fyt){
         marka = mrk;
         model = mdl;
