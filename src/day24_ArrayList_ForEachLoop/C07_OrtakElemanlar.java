@@ -33,6 +33,33 @@ public class C07_OrtakElemanlar {
 
         System.out.println("ortak elemanlar listesi : " + ortakElemanlarListesi);
 
+        // ikisinde ortak olmayan elementleri tekrar etmeden
+        // ayri bir liste olarak veren bir program yazin.
+        //output : [7,8,0,5]
 
+        // ortak olmayan elemanlar icin bir list olusturalim
+        List<Integer> ortakOlmayanElemanlar = new ArrayList<>();
+
+        // array1'deki elemanlari gozden gecirip
+        // ortak elemanlarda olmayan elemanlari yeni listeye ekleyelim
+        // ama ayni sayiyi tekrar eklememek icin listede olmadigini kontrol edelim
+
+        for (int each:array1
+             ) {
+            System.out.println(each);
+            if ( !ortakElemanlarListesi.contains(each) && !ortakOlmayanElemanlar.contains(each)){
+                ortakOlmayanElemanlar.add(each);
+            }
+        }
+
+        // ayni sekilde array2 deki elemanlari da yapalim
+        for (int each:array2
+        ) {
+            if ( !ortakElemanlarListesi.contains(each) && !ortakOlmayanElemanlar.contains(each)){
+                ortakOlmayanElemanlar.add(each);
+            }
+        }
+
+        System.out.println("Ortak olmayan elamanlar : " + ortakOlmayanElemanlar);
     }
 }
