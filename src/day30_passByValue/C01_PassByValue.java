@@ -32,8 +32,6 @@ public class C01_PassByValue {
 
         System.out.println("%30 indirimli fiyat methodu cagrildiktan sonra fiyat : " + fiyat); // 100
 
-
-
     }
 
     public static double yuzde10IndirimYap(double ucret){
