@@ -31,11 +31,11 @@ public class C05_StringPool {
 
         System.out.println("================");
 
-        System.out.println( str1 == str2); // Ali <==> Ali ==> true
-        System.out.println( str1 == str3); // Ali <==> Ali ==> false
-        System.out.println( str1 == str4); // Ali <==> Ali ==> true
-        System.out.println( str1 == str7); // Ali <==> Ali ==> false
-        System.out.println( str1 == str9); // Ali <==> Ali ==> false
-        System.out.println( str1 == "Ali"); // Ali <==> Ali ==> true
+        System.out.println( str1 == str2); // Ali H <==> Ali H  ==> true
+        System.out.println( str1 == str3); // Ali H <==> Ali HD ==> false
+        System.out.println( str1 == str4); // Ali H <==> Ali H  ==> true
+        System.out.println( str1 == str7); // Ali H <==> Ali HD ==> false
+        System.out.println( str1 == str9); // Ali H <==> Ali HD ==> false
+        System.out.println( str1 == "Ali"); // Ali H <==> Ali H ==> true
     }
 }
