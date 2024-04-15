@@ -11,8 +11,13 @@ public class C05_EncapsuleClass {
 
      */
 
-    int satisTutari;
-    int toplamSatisMiktari;
+    private int satisTutari; // setter
+    private int toplamSatisMiktari; // getter
+
+    private int encapsuleSayi;
+    // hem getter hem setter
+
+    public int publicsayi;
 
     /*
         Encapsulation bir mecburiyet degil,
@@ -24,5 +29,28 @@ public class C05_EncapsuleClass {
         1- Adindan da anlasilacagi gibi
            once bu yetkileri ayirmak istedigimiz variable'lara
            normal yollarla erisimi ENGELLEMELISINIZ
+
+        2- Sadece deger atamasi(WRITE) yapilmasini istedigimiz
+           variable'lar icin SETTER
+           Sadece gorunmesini (READ) istedigimiz
+           variable'lar icin ise GETTER
+           method'lari olusturalim
      */
+
+    public int getToplamSatisMiktari() {
+        return toplamSatisMiktari;
+    }
+
+    public void setSatisTutari(int satisTutari) {
+        this.satisTutari = satisTutari;
+        toplamSatisMiktari+= satisTutari;
+    }
+
+    public int getEncapsuleSayi() {
+        return encapsuleSayi;
+    }
+
+    public void setEncapsuleSayi(int encapsuleSayi) {
+        this.encapsuleSayi = encapsuleSayi;
+    }
 }
