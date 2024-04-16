@@ -2,11 +2,15 @@ package day36_encapsulation_inheritance;
 
 public class C08_Toyota extends C07_Araba{
 
-    String marka = "Toyota";
-    String uretimYeri = "Japanya ve Turkiye";
-    String aku = "Inci aku";
-    String guvenlik = "ABS";
-    String kasa = "Kasa belirtilmedi";
-    String teker = "Pirelli";
+    public C08_Toyota(){
+        System.out.println("Toyota cons. calisti");
+    }
+
+    public String marka = "Toyota";
+    public String uretimYeri = "Japanya ve Turkiye";
+    public String aku = "Inci aku";
+    public String guvenlik = "ABS";
+    public String kasa = "Kasa belirtilmedi";
+    public String teker = "Pirelli";
 
 }
