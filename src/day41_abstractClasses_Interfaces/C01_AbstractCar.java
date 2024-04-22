@@ -12,6 +12,7 @@ public abstract class C01_AbstractCar {
 
     // sunroof istege bagli
     public void sunroof(){
+        System.out.println("Arabalar isterse sunroof kullanabilir");
       // child class'lari kendisine uyarlama konusunda
       // serbest birakmak istedigimiz method'lari
       // concrete (abstract olmayan) method olarak olustururuz
@@ -30,7 +31,7 @@ public abstract class C01_AbstractCar {
 
     // geri gorus kamerasi zorunlu degil
     public void geriGoruskamerasi(){
-
+        System.out.println("Arabalar isterse geri gorus kamerasi kullanabilir");
     }
 
     // sanziman duz vites, otomatik vites zorunlu
