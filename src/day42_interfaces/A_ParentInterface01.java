@@ -14,4 +14,6 @@ public interface A_ParentInterface01 {
 
     public abstract int method3();
 
+
+
 }
