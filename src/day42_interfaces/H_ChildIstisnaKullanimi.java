@@ -1,5 +1,8 @@
 package day42_interfaces;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class H_ChildIstisnaKullanimi implements G_InterfacedeBodysiOlanMethodOlurMu{
 
 
@@ -38,6 +41,8 @@ public class H_ChildIstisnaKullanimi implements G_InterfacedeBodysiOlanMethodOlu
 
         G_InterfacedeBodysiOlanMethodOlurMu obj2 = new H_ChildIstisnaKullanimi();
         obj2.method3();
+
+        List<String> isimler = new ArrayList<>();
 
     }
 }
