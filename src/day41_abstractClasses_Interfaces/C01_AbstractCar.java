@@ -2,6 +2,7 @@ package day41_abstractClasses_Interfaces;
 
 public abstract class C01_AbstractCar {
 
+
     // bu class'i car uretmek isteyen tum markalarin,
     // kendilerine uyarlamasi gereken method'lari belirlemek icin olusturduk
 
