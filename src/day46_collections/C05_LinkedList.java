@@ -13,5 +13,14 @@ public class C05_LinkedList {
         // List, Queue ve Deque interface'lerinde olan tum method'lari implement etmistir
 
 
+        System.out.println(isimler.hashCode()); // 1
+
+        isimler.add("java");
+
+        System.out.println(isimler.hashCode()); // 3254849
+
+        isimler.add("candir");
+
+        System.out.println(isimler.hashCode()); // -1266823012
     }
 }
