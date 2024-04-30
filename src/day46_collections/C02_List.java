@@ -35,6 +35,7 @@ public class C02_List {
         System.out.println(sayilar); // [3]
         System.out.println(sayilar2); // [3, 4, 7]
 
+
         // sayilar2.remove(3); // IndexOutOfBoundsException
 
         System.out.println(sayilar2.equals(sayilar)); // false
