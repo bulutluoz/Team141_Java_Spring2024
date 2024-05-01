@@ -81,7 +81,7 @@ public class C01_NicinIteratorKullanilir {
 
             sayi = (Integer) iterator.next();
             if (sayi % 2 != 0){
-                iterator.remove();  // 11'yi siler
+                iterator.remove();
             }
 
         }
