@@ -34,6 +34,22 @@ public class OgrenciMapClass {
         System.out.println(ogrenciNo + " nolu ogrenci isim ve soyismi : " +
                             ogrenciValueArr[0] + " " + ogrenciValueArr[1]);
 
+    }
+
+    public static void noIleSinifVeSubeYazdir(int ogrenciNo){
+        // verilen ogrenci numarasina ait value'yu String olarak kaydedelim
+
+        String istenenOgrenciValue = ogrenciMap.get(ogrenciNo); // "Ali-Can-11-H-MF"
+
+        // bu string'deki bilgilere tek tek ulasabilmek icin
+        // value'u - ile split edelim
+
+        String[] ogrenciValueArr = istenenOgrenciValue.split("-"); // [Ali, Can, 11, H, MF]
+
+        // ogrenci value array'inde index ile istedigimiz tum bilgilere ulasabiliriz
+
+        System.out.println(ogrenciNo + " nolu ogrenci sinif ve subesi : " +
+                ogrenciValueArr[2] + "/" + ogrenciValueArr[3]);
 
     }
 }
