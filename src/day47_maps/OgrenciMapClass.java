@@ -2,6 +2,7 @@ package day47_maps;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class OgrenciMapClass {
 
@@ -18,7 +19,8 @@ public class OgrenciMapClass {
         ogrenciMap.put(107,"Esra-Han-11-M-SOZ");
     }
 
-    public static void noIleIsimSoyisimYazdir(int ogrenciNo){ // 101
+    public static void noIleIsimSoyisimYazdir(int ogrenciNo){
+        // 101
 
         // verilen ogrenci numarasina ait value'yu String olarak kaydedelim
 
@@ -50,6 +52,40 @@ public class OgrenciMapClass {
 
         System.out.println(ogrenciNo + " nolu ogrenci sinif ve subesi : " +
                 ogrenciValueArr[2] + "/" + ogrenciValueArr[3]);
+
+    }
+
+    public static void sinifVeSubeIleListeOlusturma(Integer sinif , String sube){ // 10  H
+
+        // Tum ogrencilerin value'lerini gozden gecirmemiz
+        // ve sinif ve subesi istenen degerde olan ogrencilerin
+        // istenen bilgilerini yazdirmamiz gerekiyor
+
+        // 1- Tum ogrencilerin numaralari icin
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106, 107]
+
+        // 2- her bir ogrenci key'i icin value'lere ulasmak ve
+        //    istenen islemleri yapmak icin for-each loop kullanalim (Set index desteklemez)
+
+        for (Integer eachKey : ogrenciKeySeti
+             ) {
+            // 3- eachKey tek tek tum key'leri getirecek.    103
+            //    eachKey'in getirdigi key'e ait value'yu kaydedelim
+
+            String istenenOgrenciValue = ogrenciMap.get(eachKey); // Ali-Cem-11-K-TM
+
+            // 4- ogrenci value'sunu - ile split yapip kaydedelim
+            String[] ogrenciValueArr = istenenOgrenciValue.split("-"); // [Ali, Cem, 11, K, TM]
+
+            // 5- array'den gorevde istenen sinif ve subeye esit olup olmadigini kontrol edebiliriz
+
+            if (ogrenciValueArr[2].equals(sinif+"")  && ogrenciValueArr[3].equalsIgnoreCase(sube)){
+                System.out.println(eachKey + " " + ogrenciValueArr[0] + " " + ogrenciValueArr[1]);
+            }
+
+
+        }
+
 
     }
 }
