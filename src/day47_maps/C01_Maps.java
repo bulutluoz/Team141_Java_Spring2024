@@ -32,6 +32,35 @@ public class C01_Maps {
         // bu map'de kac eleman var
         System.out.println(ogrenciMap.size()); // 3
 
+        // sadece key'leri yazdiralim
+
+        System.out.println(ogrenciMap.keySet()); // [101, 102, 103]
+
+        // map'de 102 diye bir key var mi ?
+        System.out.println(ogrenciMap.containsKey(102)); // true
+
+        // map'de 105 diye bir key var mi ?
+        System.out.println(ogrenciMap.containsKey(105)); // false
+
+        // 101 numarali ogrencinin bilgilerini yazdirin
+        System.out.println(ogrenciMap.get(101)); // Ali-Can-11-H-MF
+
+        // 106 numarali ogrencinin bilgilerini yazdirin
+        System.out.println(ogrenciMap.get(106)); // null
+
+        // Tum value'leri yazdirin
+        System.out.println(ogrenciMap.values());
+        // [Ali-Can-11-H-MF, Veli-Cem-10-K-TM, Ali-Cem-11-K-TM]
+
+        // values collection'inda kac bilgi var?
+        System.out.println(ogrenciMap.values().size()); // 3
+
+        // value'ler icinde "Ali" var mi ?
+        System.out.println(ogrenciMap.containsValue("Ali")); // false
+        // contains value butun olarak bir value'yu arar
+        // value icindeki bilgileri tek tek kontrol etmez
+
+        System.out.println(ogrenciMap.containsValue("Ali-Can-11-H-MF")); // true
 
     }
 
