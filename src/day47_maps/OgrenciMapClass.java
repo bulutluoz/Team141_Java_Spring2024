@@ -55,7 +55,8 @@ public class OgrenciMapClass {
 
     }
 
-    public static void sinifVeSubeIleListeOlusturma(Integer sinif , String sube){ // 10  H
+    public static void sinifVeSubeIleListeOlusturma(Integer sinif , String sube){
+        // 10  H
 
         // Tum ogrencilerin value'lerini gozden gecirmemiz
         // ve sinif ve subesi istenen degerde olan ogrencilerin
@@ -83,6 +84,39 @@ public class OgrenciMapClass {
                 System.out.println(eachKey + " " + ogrenciValueArr[0] + " " + ogrenciValueArr[1]);
             }
 
+
+        }
+
+
+
+
+    }
+
+    public static void isimVeSoyisimIleOgrenciBulma(String isim, String soyisim){
+        // 1- Tum ogrencilerin numaralari icin
+        Set<Integer> ogrenciKeySeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106, 107]
+
+
+        // 2- her bir ogrenci key'i icin value'lere ulasmak ve
+        //    istenen islemleri yapmak icin for-each loop kullanalim (Set index desteklemez)
+
+        for (Integer eachKey : ogrenciKeySeti
+        ) {
+
+            // 3- eachKey tek tek tum key'leri getirecek.    103
+            //    eachKey'in getirdigi key'e ait value'yu kaydedelim
+
+            String istenenOgrenciValue = ogrenciMap.get(eachKey); // Ali-Cem-11-K-TM
+
+
+            // 4- ogrenci value'sunu - ile split yapip kaydedelim
+            String[] ogrenciValueArr = istenenOgrenciValue.split("-"); // [Ali, Cem, 11, K, TM]
+
+            // 5- array'den gorevde istenen isim ve soyisme esit olup olmadigini kontrol edebiliriz
+
+            if (ogrenciValueArr[0].equalsIgnoreCase(isim) && ogrenciValueArr[1].equalsIgnoreCase(soyisim)){
+                System.out.println(eachKey + " " + ogrenciValueArr[2] + " " + ogrenciValueArr[3]);
+            }
 
         }
 
