@@ -289,4 +289,59 @@ public class OgrenciMapClass {
 
     }
 
+    public static void sinifArtir(){
+
+        // okuldaki tum ogrencileri bir ust sinifa gecirin
+        // 12.siniftaki ogrencileri mezun yapin
+        // mezun olan ogrencilere bir sey yapmayin
+
+
+        // Butun ogrencileri gozden gecirmemiz gerekiyor
+        // keySet'i alip, oradaki her bir key'i analiz etmemiz gerekir
+
+        Set<Integer> keySeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106, 107]
+
+        for (Integer eachKey : keySeti
+             ) {
+
+            // 1- eachKey'in getirdigi key'deki eski value'yu kaydedelim (ornegin eachKey=103)
+
+            String eskiValue = ogrenciMap.get(eachKey); // "Sevgi-Cem-11-M-TM"
+
+            // 2- bilgilere erisim icin split edelim
+
+            String[] valueArr = eskiValue.split("-"); // [Sevgi, Cem, 11, M, TM]
+
+            // 3- tum ogrencilerin sinif bilgisini gozden gecirip
+            //    gerekli degisikligi yapalim
+
+            String eskiSinif = valueArr[2];
+
+            switch (eskiSinif){
+                case "9" :
+                    valueArr[2] = "10";
+                    break;
+                case "10" :
+                    valueArr[2] = "11";
+                    break;
+                case "11" :
+                    valueArr[2] = "12";
+                    break;
+                case "12" :
+                    valueArr[2] = "Mezun";
+                    break;
+            }
+
+            // 4- update'i arr'de yaptik, map'i update edebilmek icin yeniValue'yu kaydedelim
+
+            String yeniValue = String.join("-",valueArr);
+
+            // 5- yeniValue ile map'i update edelim
+
+            ogrenciMap.put(eachKey,yeniValue);
+
+        }
+
+    }
+
 }
