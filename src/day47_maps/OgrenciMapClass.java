@@ -242,5 +242,51 @@ public class OgrenciMapClass {
 
     }
 
+    public static void bolumDegistir(String eskiBolum, String yeniBolum){
+        // istenen bolumdeki tum ogrencilerin,
+        // bolum isimlerini yeni verilen bolum ismi olarak degistirin
+        // Ornek; MF bolumundeki tum ogrencilerin bolumunu SAY yapin
+
+        // Butun ogrencileri gozden gecirmemiz gerekiyor
+        // keySet'i alip, oradaki her bir key'i analiz etmemiz gerekir
+
+        Set<Integer> keySeti = ogrenciMap.keySet(); // [101, 102, 103, 104, 105, 106, 107]
+
+        for (Integer eachKey : keySeti // bu loop tek tek tum key'leri bize getirir
+             ) {
+
+            // 1- eachKey'in getirdigi key'deki eski value'yu kaydedelim (ornegin eachKey=103)
+
+            String eskiValue = ogrenciMap.get(eachKey); // "Sevgi-Cem-11-M-TM"
+
+            // 2- bilgilere erisim icin split edelim
+
+            String[] valueArr = eskiValue.split("-"); // [Sevgi, Cem, 11, M, TM]
+
+            // 3- array'de bolumu kontrol edip
+            //    degistirilmesi istenen eski bolum ismi ise
+            //    yeni bolum ismi olarak update edelim
+
+            if (valueArr[4].equalsIgnoreCase(eskiBolum)){
+
+                valueArr[4] = yeniBolum;
+
+                // 4- update'i arr'de yaptik, map'i update edebilmek icin yeniValue'yu kaydedelim
+
+                String yeniValue = String.join("-",valueArr);
+
+                // 5- yeniValue ile map'i update edelim
+
+                ogrenciMap.put(eachKey,yeniValue);
+            }
+
+
+
+
+
+        }
+
+
+    }
 
 }
