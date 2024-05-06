@@ -212,6 +212,35 @@ public class OgrenciMapClass {
 
     }
 
+    public static void numaraIleSoyisimUpdate(int ogrenciNo, String yeniSoyisim){
+
+        // verilen numarali ogrencinin soyismini verilen soyisim olarak update edin
+        // ornek : 103 numarali ogrencinin soyismini Yilmaz yap
+
+        // 1- numarasi verilen ogrencinin eski value'sunu kaydedelim
+
+        String eskiValue = ogrenciMap.get(ogrenciNo); // "Ali-Cem-11-K-TM"
+
+        // 2- bilgilere ulasabilmek icin split yapalim
+
+        String[] valueArr = eskiValue.split("-"); // [Ali, Cem, 11, K, TM]
+
+        // 3- valueArr'inde istenen update'i yapabiliriz
+
+        valueArr[1] = yeniSoyisim; // [Ali, Yilmaz, 11, K, TM]
+
+        // Update islemlerinde array'de update yaptiktan sonra
+        // yapilan update'i map'e kaydetmeliyiz
+
+        // 4- valueArr'indeki bilgileri tekrar value formatinda String yapalim
+
+        String yeniValue = String.join("-",valueArr); // "Ali-Yilmaz-11-K-TM"
+
+        // 5- key ve yeni value ile map'i update edelim
+        ogrenciMap.put(ogrenciNo,yeniValue);
+
+
+    }
 
 
 }
