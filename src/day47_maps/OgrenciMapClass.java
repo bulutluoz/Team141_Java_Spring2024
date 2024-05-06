@@ -2,6 +2,7 @@ package day47_maps;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Scanner;
 import java.util.Set;
 
 public class OgrenciMapClass {
@@ -353,6 +354,25 @@ public class OgrenciMapClass {
             System.out.println("Verilen numara zaten kayitli");
         }else{
 
+            Scanner scanner = new Scanner(System.in);
+            String ogrValue= "";
+            //"Ali-Can-11-H-MF"
+            System.out.println("Ogrenci ismi ?");
+            ogrValue = scanner.nextLine() + "-";
+
+            System.out.println("Ogrenci soyismi ?");
+            ogrValue += scanner.nextLine() + "-";
+
+            System.out.println("Ogrenci sinif ?");
+            ogrValue += scanner.nextLine() + "-";
+
+            System.out.println("Ogrenci sube ?");
+            ogrValue += scanner.nextLine() + "-";
+
+            System.out.println("Ogrenci bolum ?");
+            ogrValue += scanner.nextLine() ;
+
+            ogrenciMap.put(yeniOgrenciNo,ogrValue);
 
         }
 
