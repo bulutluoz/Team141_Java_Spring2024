@@ -344,4 +344,18 @@ public class OgrenciMapClass {
 
     }
 
+    public static void ogrenciEkle(int yeniOgrenciNo){
+
+        // oncelikle bir if ile verilen numarayi kontrol edip,
+        // varolan bir numara ise uyari yazdirin
+
+        if (ogrenciMap.containsKey(yeniOgrenciNo)){
+            System.out.println("Verilen numara zaten kayitli");
+        }else{
+
+
+        }
+
+    }
+
 }
