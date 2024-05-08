@@ -29,5 +29,6 @@ public class C02_KullanimMiktarlariniBulma {
         System.out.println(sayilarVeKullanimlari); // {1=3, 2=3, 3=3, 4=3, 5=2}
 
 
+
     }
 }
